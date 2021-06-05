@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './GalleryItem.css'
+import swal from 'sweetalert';
 
 function GalleryItem ({image, getImageList}) {
     //State variable to toggle the description on and off
@@ -8,6 +9,7 @@ function GalleryItem ({image, getImageList}) {
 
     const handleLike = () => {
         console.log('In handleLike');
+        swal("hello world");
 
         const newCount = image.likes + 1;
 
@@ -40,7 +42,7 @@ function GalleryItem ({image, getImageList}) {
                     */}
                     <img className="image" onClick={() => setShowDescription(!showDescription)} src={image.path}></img>
                 <section>
-                    <button onClick={handleLike} key={image.id}>Like</button>
+                    <button className="btn btn-secondary btn-sm" onClick={handleLike} key={image.id}>Like</button>
                     <p>{image.likes} people like this!</p>
                 </section>
                 </div>
