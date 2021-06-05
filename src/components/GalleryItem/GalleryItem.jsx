@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './GalleryItem.css'
 
 function GalleryItem ({image, getImageList}) {
     //State variable to toggle the description on and off
@@ -29,7 +30,7 @@ function GalleryItem ({image, getImageList}) {
     return (
         <div>
               { showDescription ? (
-                <div onClick={() => setShowDescription(!showDescription)}>
+                <div className="item" onClick={() => setShowDescription(!showDescription)}>
                     <p>{image.description}</p>
                 </div>
             ) : (
@@ -37,10 +38,10 @@ function GalleryItem ({image, getImageList}) {
                     {/*
                     if showDescription is true, show image
                     */}
-                    <img onClick={() => setShowDescription(!showDescription)} src={image.path}></img>
+                    <img className="image" onClick={() => setShowDescription(!showDescription)} src={image.path}></img>
                 <section>
                     <button onClick={handleLike} key={image.id}>Like</button>
-                    <p>Likes: {image.likes}</p>
+                    <p>{image.likes} people like this!</p>
                 </section>
                 </div>
             )}
