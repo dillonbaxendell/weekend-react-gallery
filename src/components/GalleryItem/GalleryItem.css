@@ -4,6 +4,7 @@
     height: 200px;
     text-align: center;
     margin: 10px 10px 10px 10px;
+    color: white;
 }
 
 .image {
@@ -11,4 +12,9 @@
     width: 200px;
     height: 200px;
     margin: 10px 10px 10px 10px;
+    color: white;
+}
+
+p {
+    color: white;
 }

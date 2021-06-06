@@ -33,7 +33,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 id="display-1" className="display-1">GALLERY OF MY LIFE</h1>
         </header>
         <GalleryList imageList={imageList} getImageList={getImageList} />
 

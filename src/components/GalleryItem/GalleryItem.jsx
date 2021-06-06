@@ -9,7 +9,7 @@ function GalleryItem ({image, getImageList}) {
 
     const handleLike = () => {
         console.log('In handleLike');
-        swal("hello world");
+        swal("Thanks", "for the like", "success");
 
         const newCount = image.likes + 1;
 
@@ -42,7 +42,7 @@ function GalleryItem ({image, getImageList}) {
                     */}
                     <img className="image" onClick={() => setShowDescription(!showDescription)} src={image.path}></img>
                 <section>
-                    <button className="btn btn-secondary btn-sm" onClick={handleLike} key={image.id}>Like</button>
+                    <button className="btn btn-outline-danger btn-sm" onClick={handleLike} key={image.id}>Like</button>
                     <p>{image.likes} people like this!</p>
                 </section>
                 </div>
